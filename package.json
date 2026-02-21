@@ -1,0 +1,14 @@
+{
+  "name": "lavision-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:server": "npm --workspace apps/server run dev",
+    "build": "npm --workspace apps/web run build && npm --workspace apps/server run build",
+    "lint": "npm --workspace apps/web run lint && npm --workspace apps/server run lint"
+  }
+}
